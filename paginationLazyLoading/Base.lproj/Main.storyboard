@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="paginationLazyLoading" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GuP-Fx-YXt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="876"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserTableViewCell" rowHeight="79" id="Eyr-vu-c75" customClass="UserTableViewCell" customModule="paginationLazyLoading" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eyr-vu-c75" id="kRI-qk-9ER">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kGp-A2-Y3b">
+                                                    <rect key="frame" x="20" y="7" width="84.5" height="65"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asX-BA-1YW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="84.5" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ma-FY-RMg">
+                                                            <rect key="frame" x="0.0" y="35" width="84.5" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xn6-TV-NZC">
+                                                    <rect key="frame" x="363.5" y="24.5" width="16.5" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kGp-A2-Y3b" firstAttribute="centerY" secondItem="kRI-qk-9ER" secondAttribute="centerY" id="2J8-Bo-TGO"/>
+                                                <constraint firstItem="kGp-A2-Y3b" firstAttribute="leading" secondItem="kRI-qk-9ER" secondAttribute="leading" constant="20" id="EO9-qs-O1b"/>
+                                                <constraint firstItem="Xn6-TV-NZC" firstAttribute="centerY" secondItem="kRI-qk-9ER" secondAttribute="centerY" id="MEa-D0-paF"/>
+                                                <constraint firstItem="kGp-A2-Y3b" firstAttribute="top" secondItem="kRI-qk-9ER" secondAttribute="top" constant="7" id="nJF-IZ-W5v"/>
+                                                <constraint firstAttribute="bottom" secondItem="kGp-A2-Y3b" secondAttribute="bottom" constant="7" id="oP4-jf-Yuz"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Xn6-TV-NZC" secondAttribute="trailing" constant="14" id="q5P-5z-yXt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="genderlbl" destination="1Ma-FY-RMg" id="XFO-tB-2wi"/>
+                                            <outlet property="namlbl" destination="asX-BA-1YW" id="TZY-ii-YMc"/>
+                                            <outlet property="srnumber" destination="Xn6-TV-NZC" id="UBY-pB-mj8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="JvV-SE-z5l"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Eax-vv-QNm"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="h1n-o2-9Ov">
+                                <rect key="frame" x="0.0" y="831" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GuP-Fx-YXt" secondAttribute="trailing" id="Bo8-ra-Zcb"/>
+                            <constraint firstAttribute="bottom" secondItem="GuP-Fx-YXt" secondAttribute="bottom" constant="20" symbolic="YES" id="Gks-5M-j73"/>
+                            <constraint firstItem="GuP-Fx-YXt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fNr-ac-jDB"/>
+                            <constraint firstItem="GuP-Fx-YXt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wqI-yr-5cE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="h1n-o2-9Ov" id="4i1-ce-aH5"/>
+                        <outlet property="userTableView" destination="GuP-Fx-YXt" id="jhP-Br-VkG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+</document>
